@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('Poppins/Poppins-Regular.ttf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'poppins';
+    src: url('Poppins/Poppins-ExtraBold.ttf');
+    font-weight:900;
+}
+@font-face {
+    font-family: 'poppins';
+    src: url('Poppins/Poppins-ExtraLight.ttf');
+    font-weight:100;
+}
+@font-face {
+    font-family: 'poppins';
+    src: url('Poppins/Poppins-BoldItalic.ttf');
+    font-weight:900;
+    font-style:italic;
+}
+@font-face {
+    font-family: 'poppins';
+    src: url('Poppins/Poppins-Italic.ttf');
+    font-weight:normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'poppins';
+    src: url('Poppins/Poppins-ExtraLightItalic.ttf');
+    font-style: italic;
+    font-weight:100;
+}
+@font-face {
+    font-family: 'alfa slab';
+    src: url('Alfa_Slab_One/AlfaSlabOne-Regular.ttf');
+}
+@font-face {
+    font-family: 'anton';
+    src: url('Anton/Anton-Regular.ttf');
+}
+@font-face {
+    font-family: 'achivo black';
+    src: url('Archivo_Black/ArchivoBlack-Regular.ttf');
+}
+@font-face {
+    font-family: 'dancing script';
+    src: url('Dancing_Script/DancingScript-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/DMSans-VariableFont_opsz\,wght.ttf');
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.ttf');
+    font-style: italic;
+}
+@font-face {
+    font-family: 'pacifico';
+    src: url('Pacifico/Pacifico-Regular.ttf');
+}

@@ -128,6 +128,9 @@ html,body{
 .c-primary{
     color:var(--primary);
 }
+.text-light{
+    font-weight:100;
+}
 /* display */
 .row{
     display:flex;
