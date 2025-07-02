@@ -42,6 +42,19 @@ html,body{
 .m-5{
     margin:5px;
 }
+.top-auto{
+    margin-top:auto;
+    
+}
+.bottom-auto{
+    margin-bottom:auto;
+}
+.left-auto{
+    margin-left:auto;
+}
+.right-auto{
+    margin-right:auto;
+}
 /* border radius */
 .br-10{
     border-radius:10px;
