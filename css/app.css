@@ -1,5 +1,196 @@
 :root{
     --primary:rgb(108,92,230);
     --secondary:navy;
-    
+    --font:'poppins';
+    --bg:whitesmoke;
+    --bg-light:white;
+    --text:black;
+
+}
+html,body{
+    margin:0;
+    padding:0;
+    font-size:20px;
+
+}
+*{
+    box-sizing:border-box;
+}
+.btn,input{
+    font-family:var(--font);
+
+}
+/* border */
+.border-none{
+    border:none;
+}
+.border-1{
+    border:1px solid;
+}
+/* padding */
+.p-10{
+    padding:10px;
+}
+.p-5{
+    padding:5px;
+}
+/* margin */
+.m-10{
+    margin:10px;
+
+}
+.m-5{
+    margin:5px;
+}
+/* border radius */
+.br-10{
+    border-radius:10px;
+}
+.br-5{
+    border-radius:5px;
+}
+.br-1000{
+    border-radius:100px;
+}
+.circle{
+    border-radius:50%;
+}
+/* width */
+.w-half{
+    width:50%;
+}
+.w-full{
+    width:100%;
+}
+.w-fit{
+    width:fit-content;
+}
+/* height */
+.h-half{
+    height:50%;
+}
+.h-full{
+    height:100%;
+}
+.h-fit{
+    height:fit-content;
+}
+/* description/heading */
+.desc{
+    font-size:1.2rem;
+}
+.bold{
+    font-weight:bold;
+}
+.u{
+    text-decoration:underline;
+}
+/* pointer */
+.pointer{
+    cursor:pointer;
+}
+/* clip paths */
+.clip-10{
+    clip-path:inset(0 round 10px);
+}
+.clip-5{
+      clip-path:inset(0 round 5px); 
+}
+.clip-20{
+       clip-path:inset(0 round 20px);
+}
+.clip-1000{
+       clip-path:inset(0 round 1000px);
+}
+.clip-circle{
+       clip-path:inset(0 round 50%);
+}
+/* background */
+.bg{
+    background:var(--bg);
+}
+.bg-primary{
+    background:var(--primary);
+}
+.bg-secondary{
+    background:var(--bg-secondary);
+}
+/* text  */
+.text-white{
+    color:white;
+}
+.text-black{
+    color:black;
+}
+.select-none{
+    user-select: none;
+}
+.c-primary{
+    color:var(--primary);
+}
+/* display */
+.row{
+    display:flex;
+    flex-direction: row;
+}
+.column{
+    display:flex;
+    flex-direction:column;
+}
+.g-5{
+    gap:5px;
+
+}
+.g-10{
+    gap:10px;
+}
+.g-20{
+    gap:20px;
+}
+.grid{
+    display:grid;
+
+}
+.grid-2{
+    grid-template-columns: repeat(2,1fr);
+}
+.grid-full{
+    grid-column: 1/-1;
+
+}
+.grid-3{
+    grid-template-columns: repeat(3,1fr);
+}
+.grid-4{
+    grid-template-columns: repeat(4,1fr);
+}
+.grid-5{
+    grid-template-columns: repeat(5,1fr);
+}
+.grid-6{
+    grid-template-columns: repeat(6,1fr);
+}
+.grid-7{
+    grid-template-columns: repeat(7,1fr);
+}
+.grid-8{
+    grid-template-columns: repeat(8,1fr);
+}
+.grid-9{
+    grid-template-columns: repeat(9,1fr);
+}
+.grid-10{
+    grid-template-columns: repeat(10,1fr);
+}
+.align-center{
+    align-items:center;
+}
+.justify-center{
+    align-items:center;
+    justify-content: center;
+}
+@media(min-width:800px){
+    .pc-pointer{
+        cursor:pointer;
+    }
 }
