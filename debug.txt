@@ -1,6 +1,0 @@
-PS C:\xampp\htdocs\vitecss> git remote -v
-git     branch (fetch)
-git     branch (push)
-origin  https://github.com/techie5961/vitecss.git (fetch)
-origin  https://github.com/techie5961/vitecss.git (push)
-PS C:\xampp\htdocs\vitecss> 
