@@ -534,18 +534,18 @@ button.post.active .working{
     max-width:200px;
 }
 .w-30{
-    width:30px;
+    width:30px !important;
 
 }
 .w-50{
-    width:50px;
+    width:50px !important;
 }
 
 .w-150{
-    width:150px;
+    width:150px !important;
 }
 .w-200{
-    width:200px;
+    width:200px !important;
 }
 /* height */
 .h-half{
@@ -561,16 +561,16 @@ button.post.active .working{
     aspect-ratio: 1;
 }
 .h-30{
-    height:30px;
+    height:30px !important;
 }
 .h-50{
-    height:50px;
+    height:50px !important;
 }
 .h-150{
-    height:150px;
+    height:150px !important;
 }
 .h-200{
-    height:200px;
+    height:200px !important;
 }
 
 /* description/heading */
@@ -681,6 +681,9 @@ button.post.active .working{
 }
 .no-select{
     user-select:none;
+}
+.no-resize{
+    resize: none;
 }
 .text-bold,.text-b{
     font-weight:bold;

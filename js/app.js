@@ -134,7 +134,7 @@ function copy(data){
     if(navigator.clipboard.writeText(data)){
         CreateNotify('success','copied successfully');
     }
-}
+} 
 // show popup
 function PopUp(data=null){
     if(data !== null){
@@ -142,11 +142,13 @@ function PopUp(data=null){
     }
     document.querySelector('.popup').classList.add('active');
     document.body.classList.add('overflow-hidden');
+    document.body.style.overflow="hidden";
 }
 // hide popup
 function HidePopUp(){
     document.querySelector('.popup').classList.remove('active');
     document.body.classList.remove('overflow-hidden');
+    document.body.style.overflow="auto";
 }
 // slideup
 function SlideUp(content=null){
