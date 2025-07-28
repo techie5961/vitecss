@@ -74,3 +74,15 @@
 
 
 }
+@font-face {
+    font-family: 'ryal';
+    src: url('Ryal/a-ryal-black-block.ttf');
+}
+@font-face {
+    font-family: 'plaster';
+    src: url('Plaster/Plaster-Regular.ttf');
+}
+@font-face {
+    font-family: 'reem kufi ink';
+    src: url('Reem_Kufi_Ink/ReemKufiInk-Regular.ttf');
+}

@@ -193,13 +193,20 @@ function PreviewPhoto(element,label){
     }
 
 }
+// hide loading
 function HideLoading(){
     document.querySelector(".loading").style.display='none';
     document.body.classList.remove('overflow-hidden');
 
 }
+// set vh
+function SetWindowHeight(){
+    let height=window.innerHeight;
+    document.body.style.minHeight=height + 'px';
+}
 // calling functions
 HidePrompt();
+SetWindowHeight();
 window.onload=function(){
     HideLoading();
 }
