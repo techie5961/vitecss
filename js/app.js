@@ -6,59 +6,67 @@ function BallLoad(){
 function HideBallLoad(){
    document.body.classList.remove('loading');
 }
+function IsJSONABLE(data){
+    try{
+      JSON.parse(data);
+      return true;
+    }catch{
+        return false;
+    }
+}
 // post request
 async function PostRequest(event,element,callback=null){
- try{
+  try{
       event.preventDefault();
-   let IsEmpty=false;
-    let conts=element.querySelectorAll('.cont');
-    conts.forEach((cont)=>{
-        let inp=cont.querySelector('.input');
-        if(inp.value == ''){
-            cont.querySelector('.prompt').style.display='flex';
-             IsEmpty=true;
+ let inputs=element.querySelectorAll('.inp.required');
+ 
+ 
+ let isEmpty = false;
+
+ if(inputs){
+    inputs.forEach((input)=>{
+        if(input.value == ''){
+           // isEmpty=true;
+            input.classList.add('empty');
+        }else{
+            input.classList.remove('empty');
         }
+
     });
-    if(!IsEmpty){
-        BallLoad();
-        let inputs=element.querySelectorAll('.input');
-        let form=new FormData();
-        if(inputs){
-           inputs.forEach((input)=>{
-            form.append(input.name,input.value);
-           });
-        }
-        let files=element.querySelectorAll(".file");
-        if(files){
-            files.forEach((file)=>{
-                let fil=file.files[0];
-                if(fil){
-                    form.append(file.name,fil);
-                }
-            });
-        }
-        let response=await fetch(element.action,{
-            method : 'POST',
-            body : form
-        });
-        if(response.ok){
-            let data=await response.json();
-            CreateNotify(data.status,data.message);
-            if(callback !== null){
-                callback(JSON.stringify(data),event);
-            }
-            HideBallLoad();
-        } else{
-           CreateNotify('error',response.status + ' Error');
-
-            HideBallLoad()
-        }
-
-    }
-   
- }catch(error){
-    alert(error.stack)
  }
+ if(isEmpty){
+    alert(10)
+ }
+ if(!isEmpty){
+  
+    element.querySelector('button').classList.add('active');
+    let inps=element.querySelectorAll('.input');
+    let form=new FormData();
+    inps.forEach((inp)=>{
+       form.append(inp.name,inp.value);
+    });
+    let response=await fetch(element.action,{
+        method : 'POST',
+        body : form
+     });
+     if(response.ok){
+        let data=await response.text();
+        if(IsJSONABLE(data)){
+            let json=JSON.parse(data);
+            CreateNotify(json.status,json.message);
+        }else{
+            CreateNotify('error',data);
+        }
+        if(callback !== null){
+            callback(response,event);
+        }
+        element.querySelector('button').classList.remove('active');
+     }
+ }
+  }catch(error){
+    CreateNotify('error',error.stack);
+    element.querySelector('button').classList.remove('active');
+  }
 }
 
 //  hide prompt
@@ -77,29 +85,35 @@ function HidePrompt(){
 }
 // create notify
 function CreateNotify(status,message){
-    let notify= document.querySelector('.notify');
-    if(notify){
-     notify.remove();
-    }
-   
-    let div=document.createElement('div');
-    div.classList.add('notify');
-    div.classList.add(status);
-    div.classList.add('row');
-    div.classList.add('space-between');
-    div.classList.add('align-center');
-    div.classList.add('g-5');
-    div.classList.add('g-10');
-    div.classList.add('p-10')
-    div.innerHTML=`  <svg class="svg check" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
-    <svg class="svg error" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm-4,48a12,12,0,1,1-12,12A12,12,0,0,1,124,72Zm12,112a16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40a8,8,0,0,1,0,16Z"></path></svg>
-    <span class="right-auto">${message}</span>
-    <svg onclick="HideNotify()" class="bottom-auto pc-pointer" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 256 256"><path d="M202.83,197.17a4,4,0,0,1-5.66,5.66L128,133.66,58.83,202.83a4,4,0,0,1-5.66-5.66L122.34,128,53.17,58.83a4,4,0,0,1,5.66-5.66L128,122.34l69.17-69.17a4,4,0,1,1,5.66,5.66L133.66,128Z"></path></svg>
-  <div class="bar-line"></div>`;
-  document.body.appendChild(div);
-  setTimeout(()=>{
-    div.remove();
-  },2000)
+  let section=document.createElement('section');
+  section.classList.add('notify');
+  section.classList.add(status);
+  section.innerHTML=` <div class="row g-5 w-full p-5 body space-between align-center">
+            <div class="icon"></div>
+            <div class="message right-auto">
+            ${message}
+        </div>
+        <div onclick="HideNotify()" class="close pc-pointer bottom-auto"></div>
+        </div>
+        <div class="footer">
+            <span></span>
+        </div>`;
+       
+        section.addEventListener('touchstart',function(){
+       ScheduledTimeout=setTimeout(()=>{
+       clearTimeout(RemoveNotify);
+       section.querySelector('.footer span').style.animationPlayState='paused';
+       },1000)
+
+        });
+        section.addEventListener('touchend',()=>{
+            clearTimeout(ScheduledTimeout);
+        })
+       
+        document.body.appendChild(section);
+        let RemoveNotify=setTimeout(()=>{
+            section.remove();
+        },5000);
     
 }
 function HideNotify(){
@@ -205,7 +219,7 @@ function SetWindowHeight(){
     document.body.style.minHeight=height + 'px';
 }
 // calling functions
-HidePrompt();
+
 SetWindowHeight();
 window.onload=function(){
     HideLoading();
