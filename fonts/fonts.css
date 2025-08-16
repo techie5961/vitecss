@@ -49,8 +49,24 @@
 }
 @font-face {
     font-family: 'dm sans';
-    src: url('DM_Sans/DMSans-VariableFont_opsz\,wght.ttf');
+    src: url('DM_Sans/static/DMSans-Regular.ttf');
 }
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-Bold.ttf');
+    font-weight:700;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-ExtraBold.ttf');
+    font-weight:900;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans_18pt-Light.ttf');
+    font-weight:100;
+}
+
 @font-face {
     font-family: 'dm sans';
     src: url('DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.ttf');
@@ -85,4 +101,46 @@
 @font-face {
     font-family: 'reem kufi ink';
     src: url('Reem_Kufi_Ink/ReemKufiInk-Regular.ttf');
+}
+@font-face {
+    font-family: 'libertinus sans';
+    src: url('Libertinus_Sans/LibertinusSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'libertinus sans';
+    src: url('Libertinus_Sans/LibertinusSans-Bold.ttf');
+    font-weight:bold;
+}
+@font-face {
+    font-family: 'libertinus sans';
+    src: url('Libertinus_Sans/LibertinusSans-Italic.ttf');
+    font-style: italic;
+}
+@font-face {
+    font-family: 'teachers';
+    src: url('Teachers/Teachers-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'outfit';
+    src: url('Outfit/static/Outfit-Regular.ttf');
+}
+@font-face {
+    font-family: 'outfit';
+    src: url('Outfit/static/Outfit-Bold.ttf');
+    font-weight:700;
+}
+@font-face {
+    font-family: 'outfit';
+    src: url('Outfit/static/Outfit-ExtraBold.ttf');
+    font-weight:900;
+}
+@font-face {
+    font-family: 'outfit';
+    src: url('Outfit/static/Outfit-Light.ttf');
+    font-weight:300;
+}
+@font-face {
+    font-family: 'outfit';
+    src: url('Outfit/static/Outfit-ExtraLight.ttf');
+    font-weight:100;
 }
