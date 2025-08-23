@@ -1,16 +1,16 @@
 :root{
     /* primary color */
-    --primary:rgb(0, 178, 248);
+    --primary:rgb(108,92,230);
     /* color on element with background as primary color */
     --primary-text:white;
     /* transparent of primary color */
-    --primary-transparent:rgb(0, 255, 255,0.1);
+    --primary-transparent:rgb(108,92,230,0.1);
     /* darker primary color */
-     --primary-dark:rgb(0, 145, 125);
+     --primary-dark:rgb(44, 37, 99);
      /* secondary color */
-    --secondary:rgb(162,232,143);
+    --secondary:rgb(aqua);
     /* primary font */
-    --font:'libertinus sans';
+    --font:'poppins';
     /* background color */
     --bg:whitesmoke;
     /* primary light color for cards etc */
@@ -28,7 +28,7 @@
     /* dim color for cards etc usually grey */
     --bg-dim:rgb(231, 231, 231,0.5);
     /* gradient color usually combo of primary and secondary */
-    --gradient:linear-gradient(to right,rgb(0,191,166),rgb(162,232,143));
+    --gradient:linear-gradient(to right,var(--primary),var(--secondary));
     /* button text color for btn,posts button etc */
     --btn-text:white;
     /* gradient of text with gradiented background clipped */
@@ -44,7 +44,7 @@
     /* box shadow for red */
     --box-shadow-red:0 10px 10px -5px rgba(255,0,0,0.2);
     /* svg for loading states on submitting buttons */
-    --svg:url('data:image/svg+xml,%3Csvg%20fill%3D%22white%22%20height%3D%2230%22%20width%3D%2230%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%223%22%20r%3D%220%22%3E%3Canimate%20id%3D%22spinner_6RAU%22%20begin%3D%220%3Bspinner_GErc.end-0.5s%22%20attributeName%3D%22r%22%20calcMode%3D%22spline%22%20dur%3D%220.6s%22%20values%3D%220%3B2%3B0%22%20keySplines%3D%22.27%2C.42%2C.37%2C.99%3B.53%2C0%2C.61%2C.73%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%2216.50%22%20cy%3D%224.21%22%20r%3D%220%22%3E%3Canimate%20id%3D%22spinner_khXL%22%20begin%3D%22spinner_6RAU.begin%2B0.1s%22%20attributeName%3D%22r%22%20calcMode%3D%22spline%22%20dur%3D%220.6s%22%20values%3D%220%3B2%3B0%22%20keySplines%3D%22.27%2C.42%2C.37%2C.99%3B.53%2C0%2C.61%2C.73%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%227.50%22%20cy%3D%224.21%22%20r%3D%220%22%3E%3Canimate%20id%3D%22spinner_GErc%22%20begin%3D%22spinner_JEaM.begin%2B0.1s%22%20attributeName%3D%22r%22%20calcMode%3D%22spline%22%20dur%3D%220.6s%22%20values%3D%220%3B2%3B0%22%20keySplines%3D%22.27%2C.42%2C.37%2C.99%3B.53%2C0%2C.61%2C.73%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%2219.79%22%20cy%3D%227.50%22%20r%3D%220%22%3E%3Canimate%20id%3D%22spinner_9orP%22%20begin%3D%22spinner_khXL.begin%2B0.1s%22%20attributeName%3D%22r%22%20calcMode%3D%22spline%22%20dur%3D%220.6s%22%20values%3D%220%3B2%3B0%22%20keySplines%3D%22.27%2C.42%2C.37%2C.99%3B.53%2C0%2C.61%2C.73%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%224.21%22%20cy%3D%227.50%22%20r%3D%220%22%3E%3Canimate%20id%3D%22spinner_JEaM%22%20begin%3D%22spinner_RwRf.begin%2B0.1s%22%20attributeName%3D%22r%22%20calcMode%3D%22spline%22%20dur%3D%220.6s%22%20values%3D%220%3B2%3B0%22%20keySplines%3D%22.27%2C.42%2C.37%2C.99%3B.53%2C0%2C.61%2C.73%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%2221.00%22%20cy%3D%2212.00%22%20r%3D%220%22%3E%3Canimate%20id%3D%22spinner_W8J5%22%20begin%3D%22spinner_9orP.begin%2B0.1s%22%20attributeName%3D%22r%22%20calcMode%3D%22spline%22%20dur%3D%220.6s%22%20values%3D%220%3B2%3B0%22%20keySplines%3D%22.27%2C.42%2C.37%2C.99%3B.53%2C0%2C.61%2C.73%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%223.00%22%20cy%3D%2212.00%22%20r%3D%220%22%3E%3Canimate%20id%3D%22spinner_RwRf%22%20begin%3D%22spinner_tByH.begin%2B0.1s%22%20attributeName%3D%22r%22%20calcMode%3D%22spline%22%20dur%3D%220.6s%22%20values%3D%220%3B2%3B0%22%20keySplines%3D%22.27%2C.42%2C.37%2C.99%3B.53%2C0%2C.61%2C.73%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%2219.79%22%20cy%3D%2216.50%22%20r%3D%220%22%3E%3Canimate%20id%3D%22spinner_tedm%22%20begin%3D%22spinner_W8J5.begin%2B0.1s%22%20attributeName%3D%22r%22%20calcMode%3D%22spline%22%20dur%3D%220.6s%22%20values%3D%220%3B2%3B0%22%20keySplines%3D%22.27%2C.42%2C.37%2C.99%3B.53%2C0%2C.61%2C.73%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%224.21%22%20cy%3D%2216.50%22%20r%3D%220%22%3E%3Canimate%20id%3D%22spinner_tByH%22%20begin%3D%22spinner_c3Lr.begin%2B0.1s%22%20attributeName%3D%22r%22%20calcMode%3D%22spline%22%20dur%3D%220.6s%22%20values%3D%220%3B2%3B0%22%20keySplines%3D%22.27%2C.42%2C.37%2C.99%3B.53%2C0%2C.61%2C.73%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%2216.50%22%20cy%3D%2219.79%22%20r%3D%220%22%3E%3Canimate%20id%3D%22spinner_QxRo%22%20begin%3D%22spinner_tedm.begin%2B0.1s%22%20attributeName%3D%22r%22%20calcMode%3D%22spline%22%20dur%3D%220.6s%22%20values%3D%220%3B2%3B0%22%20keySplines%3D%22.27%2C.42%2C.37%2C.99%3B.53%2C0%2C.61%2C.73%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%227.50%22%20cy%3D%2219.79%22%20r%3D%220%22%3E%3Canimate%20id%3D%22spinner_c3Lr%22%20begin%3D%22spinner_PW3C.begin%2B0.1s%22%20attributeName%3D%22r%22%20calcMode%3D%22spline%22%20dur%3D%220.6s%22%20values%3D%220%3B2%3B0%22%20keySplines%3D%22.27%2C.42%2C.37%2C.99%3B.53%2C0%2C.61%2C.73%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2221%22%20r%3D%220%22%3E%3Canimate%20id%3D%22spinner_PW3C%22%20begin%3D%22spinner_QxRo.begin%2B0.1s%22%20attributeName%3D%22r%22%20calcMode%3D%22spline%22%20dur%3D%220.6s%22%20values%3D%220%3B2%3B0%22%20keySplines%3D%22.27%2C.42%2C.37%2C.99%3B.53%2C0%2C.61%2C.73%22%2F%3E%3C%2Fcircle%3E%3C%2Fsvg%3E');
+    --svg:url('data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3Csvg%20height%3D%2230%22%20width%3D%2230%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%202400%202400%22%20xml%3Aspace%3D%22preserve%22%3E%3Cg%20stroke-width%3D%22200%22%20stroke-linecap%3D%22round%22%20stroke%3D%22white%22%20fill%3D%22none%22%20id%3D%22spinner%22%3E%3Cline%20x1%3D%221200%22%20y1%3D%22600%22%20x2%3D%221200%22%20y2%3D%22100%22%2F%3E%3Cline%20opacity%3D%220.5%22%20x1%3D%221200%22%20y1%3D%222300%22%20x2%3D%221200%22%20y2%3D%221800%22%2F%3E%3Cline%20opacity%3D%220.917%22%20x1%3D%22900%22%20y1%3D%22680.4%22%20x2%3D%22650%22%20y2%3D%22247.4%22%2F%3E%3Cline%20opacity%3D%220.417%22%20x1%3D%221750%22%20y1%3D%222152.6%22%20x2%3D%221500%22%20y2%3D%221719.6%22%2F%3E%3Cline%20opacity%3D%220.833%22%20x1%3D%22680.4%22%20y1%3D%22900%22%20x2%3D%22247.4%22%20y2%3D%22650%22%2F%3E%3Cline%20opacity%3D%220.333%22%20x1%3D%222152.6%22%20y1%3D%221750%22%20x2%3D%221719.6%22%20y2%3D%221500%22%2F%3E%3Cline%20opacity%3D%220.75%22%20x1%3D%22600%22%20y1%3D%221200%22%20x2%3D%22100%22%20y2%3D%221200%22%2F%3E%3Cline%20opacity%3D%220.25%22%20x1%3D%222300%22%20y1%3D%221200%22%20x2%3D%221800%22%20y2%3D%221200%22%2F%3E%3Cline%20opacity%3D%220.667%22%20x1%3D%22680.4%22%20y1%3D%221500%22%20x2%3D%22247.4%22%20y2%3D%221750%22%2F%3E%3Cline%20opacity%3D%220.167%22%20x1%3D%222152.6%22%20y1%3D%22650%22%20x2%3D%221719.6%22%20y2%3D%22900%22%2F%3E%3Cline%20opacity%3D%220.583%22%20x1%3D%22900%22%20y1%3D%221719.6%22%20x2%3D%22650%22%20y2%3D%222152.6%22%2F%3E%3Cline%20opacity%3D%220.083%22%20x1%3D%221750%22%20y1%3D%22247.4%22%20x2%3D%221500%22%20y2%3D%22680.4%22%2F%3E%3CanimateTransform%20attributeName%3D%22transform%22%20attributeType%3D%22XML%22%20type%3D%22rotate%22%20keyTimes%3D%220%3B0.08333%3B0.16667%3B0.25%3B0.33333%3B0.41667%3B0.5%3B0.58333%3B0.66667%3B0.75%3B0.83333%3B0.91667%22%20values%3D%220%201199%201199%3B30%201199%201199%3B60%201199%201199%3B90%201199%201199%3B120%201199%201199%3B150%201199%201199%3B180%201199%201199%3B210%201199%201199%3B240%201199%201199%3B270%201199%201199%3B300%201199%201199%3B330%201199%201199%22%20dur%3D%220.83333s%22%20begin%3D%220s%22%20repeatCount%3D%22indefinite%22%20calcMode%3D%22discrete%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A%09');
     /* svg for error inloading spa */
     --error-svg:url('data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%0A%3C!--%20Uploaded%20to%3A%20SVG%20Repo%2C%20www.svgrepo.com%2C%20Generator%3A%20SVG%20Repo%20Mixer%20Tools%20--%3E%0A%3Csvg%20height%3D%22800px%22%20width%3D%22800px%22%20version%3D%221.1%22%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20%0A%09%20viewBox%3D%220%200%20366.498%20366.498%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cg%20id%3D%22XMLID_1128_%22%3E%0A%09%3Cg%20id%3D%22XMLID_1129_%22%3E%0A%09%09%3Cpath%20id%3D%22XMLID_1130_%22%20style%3D%22fill%3A%2378B9EB%3B%22%20d%3D%22M222.061%2C80.586c0-4.603-0.53-9.078-1.53-13.374l12.635-10.265l-14.467-25.06%0A%09%09%09l-15.224%2C5.815c-6.504-6.097-14.394-10.73-23.149-13.379l-2.571-16.075h-28.937l-2.571%2C16.075%0A%09%09%09c-8.756%2C2.648-16.645%2C7.282-23.149%2C13.379l-15.222-5.815l-14.469%2C25.06l12.637%2C10.265c-1%2C4.296-1.53%2C8.771-1.53%2C13.374%0A%09%09%09c0%2C4.603%2C0.53%2C9.078%2C1.53%2C13.374l-12.637%2C10.265l14.469%2C25.06l15.222-5.815c6.504%2C6.097%2C14.394%2C10.732%2C23.149%2C13.38l2.571%2C16.074%0A%09%09%09h28.937l2.571-16.074c8.756-2.648%2C16.646-7.283%2C23.149-13.38l15.224%2C5.815l14.467-25.06L220.53%2C93.96%0A%09%09%09C221.53%2C89.664%2C222.061%2C85.188%2C222.061%2C80.586z%22%2F%3E%0A%09%09%3Cpath%20id%3D%22XMLID_1131_%22%20style%3D%22fill%3A%23006DF0%3B%22%20d%3D%22M163.287%2C8.249h-14.47l-2.571%2C16.075c-8.756%2C2.648-16.645%2C7.282-23.149%2C13.379%0A%09%09%09l-15.222-5.815l-14.469%2C25.06l12.637%2C10.265c-1%2C4.296-1.53%2C8.771-1.53%2C13.374c0%2C4.603%2C0.53%2C9.078%2C1.53%2C13.374l-12.637%2C10.265%0A%09%09%09l14.469%2C25.06l15.222-5.815c6.504%2C6.097%2C14.394%2C10.732%2C23.149%2C13.38l2.571%2C16.074h14.47V8.249z%22%2F%3E%0A%09%3C%2Fg%3E%0A%09%3Cg%20id%3D%22XMLID_1132_%22%3E%0A%09%09%3Cg%20id%3D%22XMLID_1133_%22%3E%0A%09%09%09%3Cpath%20id%3D%22XMLID_1134_%22%20style%3D%22fill%3A%23FFDA44%3B%22%20d%3D%22M353.685%2C208.567c0-5.311-0.611-10.475-1.765-15.432l14.578-11.844%0A%09%09%09%09l-16.693-28.916l-17.564%2C6.711c-7.506-7.035-16.608-12.381-26.712-15.438l-2.967-18.548h-33.389l-2.967%2C18.548%0A%09%09%09%09c-10.101%2C3.057-19.206%2C8.402-26.709%2C15.438l-17.564-6.711l-16.695%2C28.916l14.58%2C11.844c-1.154%2C4.957-1.765%2C10.121-1.765%2C15.432%0A%09%09%09%09c0%2C5.31%2C0.61%2C10.475%2C1.765%2C15.431l-14.58%2C11.845l16.695%2C28.915l17.564-6.71c7.503%2C7.035%2C16.608%2C12.383%2C26.709%2C15.438%0A%09%09%09%09l2.967%2C18.548h33.389l2.967-18.548c10.104-3.055%2C19.206-8.402%2C26.712-15.438l17.564%2C6.71l16.693-28.915l-14.578-11.845%0A%09%09%09%09C353.073%2C219.042%2C353.685%2C213.877%2C353.685%2C208.567z%22%2F%3E%0A%09%09%09%3Cpath%20id%3D%22XMLID_1135_%22%20style%3D%22fill%3A%23FF9811%3B%22%20d%3D%22M285.868%2C125.102h-16.695l-2.967%2C18.548%0A%09%09%09%09c-10.101%2C3.057-19.206%2C8.402-26.709%2C15.438l-17.564-6.711l-16.695%2C28.916l14.58%2C11.844c-1.154%2C4.957-1.765%2C10.121-1.765%2C15.432%0A%09%09%09%09c0%2C5.31%2C0.61%2C10.475%2C1.765%2C15.431l-14.58%2C11.845l16.695%2C28.915l17.564-6.71c7.503%2C7.035%2C16.608%2C12.383%2C26.709%2C15.438%0A%09%09%09%09l2.967%2C18.548h16.695V125.102z%22%2F%3E%0A%09%09%3C%2Fg%3E%0A%09%09%3Ccircle%20id%3D%22XMLID_1136_%22%20style%3D%22fill%3A%23FFFFFF%3B%22%20cx%3D%22285.869%22%20cy%3D%22208.567%22%20r%3D%2238.951%22%2F%3E%0A%09%3C%2Fg%3E%0A%09%3Cg%20id%3D%22XMLID_1137_%22%3E%0A%09%09%3Cg%20id%3D%22XMLID_1138_%22%3E%0A%09%09%09%3Cpath%20id%3D%22XMLID_1139_%22%20style%3D%22fill%3A%23006DF0%3B%22%20d%3D%22M178.135%2C258.09c0-6.37-0.732-12.568-2.117-18.518l17.495-14.213l-20.032-34.697%0A%09%09%09%09l-21.079%2C8.053c-9.005-8.443-19.93-14.859-32.052-18.526l-3.561-22.258H76.724l-3.561%2C22.258%0A%09%09%09%09c-12.122%2C3.667-23.049%2C10.083-32.054%2C18.526l-21.077-8.053L0%2C225.359l17.495%2C14.213c-1.384%2C5.949-2.119%2C12.147-2.119%2C18.518%0A%09%09%09%09c0%2C6.371%2C0.735%2C12.569%2C2.119%2C18.519L0%2C290.821l20.032%2C34.696l21.077-8.053c9.005%2C8.443%2C19.932%2C14.862%2C32.054%2C18.526l3.561%2C22.258%0A%09%09%09%09h40.065l3.561-22.258c12.122-3.664%2C23.047-10.083%2C32.052-18.526l21.079%2C8.053l20.032-34.696l-17.495-14.213%0A%09%09%09%09C177.402%2C270.659%2C178.135%2C264.461%2C178.135%2C258.09z%22%2F%3E%0A%09%09%09%3Cpath%20id%3D%22XMLID_1140_%22%20style%3D%22fill%3A%230052B4%3B%22%20d%3D%22M96.756%2C157.931H76.724l-3.561%2C22.258%0A%09%09%09%09c-12.122%2C3.667-23.049%2C10.083-32.054%2C18.526l-21.077-8.053L0%2C225.359l17.495%2C14.213c-1.384%2C5.949-2.119%2C12.147-2.119%2C18.518%0A%09%09%09%09c0%2C6.371%2C0.735%2C12.569%2C2.119%2C18.519L0%2C290.821l20.032%2C34.696l21.077-8.053c9.005%2C8.443%2C19.932%2C14.862%2C32.054%2C18.526l3.561%2C22.258%0A%09%09%09%09h20.032V157.931z%22%2F%3E%0A%09%09%3C%2Fg%3E%0A%09%09%3Ccircle%20id%3D%22XMLID_1141_%22%20style%3D%22fill%3A%23FFFFFF%3B%22%20cx%3D%2296.756%22%20cy%3D%22258.09%22%20r%3D%2249.802%22%2F%3E%0A%09%3C%2Fg%3E%0A%09%3Ccircle%20id%3D%22XMLID_1142_%22%20style%3D%22fill%3A%23FFFFFF%3B%22%20cx%3D%22163.286%22%20cy%3D%2280.586%22%20r%3D%2233.386%22%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E');
 
@@ -72,6 +72,16 @@ main{
   
 }
 /* nav */
+nav .child .group .child{
+    display:none;
+}
+nav .child .group.active .child{
+    display:flex;
+
+}
+nav .child .group.active .rotate{
+    transform:rotate(90deg)
+}
 .nav{
     color:var(--text);
 
@@ -260,6 +270,21 @@ input.empty,select.empty,.cont.empty{
     animation:vibrate 0.2s linear ;
     
 }
+.placeholder{
+    top:50%;
+    left:10px;
+    transform:translateY(-50%);
+    pointer-events:none;
+    transition:all 0.5s ease;
+
+}
+.placeholder-input:focus + .placeholder,.placeholder-input:not(:placeholder-shown) + .placeholder{
+    color:var(--primary);
+    top:0;
+    background:var(--bg-light);
+    padding:0 5px;
+    font-size:0.6rem;
+}
 .ph-c-white::placeholder{
     color:white;
 }
@@ -310,6 +335,8 @@ button.active{
     background-position: center !important;
     color:transparent !important;
     pointer-events: none !important;
+    background-size:contain;
+    background-origin: content-box;
    
 
 }
@@ -1028,46 +1055,46 @@ button.post.active .working{
     margin-left:10px;
     margin-right:10px;
 }
-.full-auto{
+.m-full-auto{
     margin:auto;
 }
-.x-auto{
+.m-x-auto{
     margin-left:auto;
     margin-right:auto;
 }
-.y-auto{
+.m-y-auto{
     margin-top:auto;
     margin-bottom:auto;
 }
-.top-10{
+.m-top-10{
    margin-top:10px !important;
 }
-.top-20{
+.m-top-20{
     margin-top:20px !important;
 
 }
-.top-50{
+.m-top-50{
     margin-top:50px !important;
 }
-.bottom-20{
+.m-bottom-20{
     margin-bottom:20px !important;
 }
-.bottom-50{
+.m-bottom-50{
     margin-bottom: 50px !important;
 }
-.left-20{
+.m-left-20{
     margin-left:20px !important;
 }
-.right-20{
+.m-right-20{
     margin-right:20px !important;
 }
-.bottom-10{
+.m-bottom-10{
     margin-bottom:10px !important;
 }
-.left-10{
+.m-left-10{
     margin-left:10px !important;
 }
-.right-10{
+.m-right-10{
     margin-right:10px !important;
 }
 
@@ -1075,17 +1102,17 @@ button.post.active .working{
 .m-5{
     margin:5px;
 }
-.top-auto{
+.m-top-auto{
     margin-top:auto;
     
 }
-.bottom-auto{
+.m-bottom-auto{
     margin-bottom:auto;
 }
-.left-auto{
+.m-left-auto{
     margin-left:auto;
 }
-.right-auto{
+.m-right-auto{
     margin-right:auto;
 }
 /* border radius */
@@ -1506,6 +1533,9 @@ button.post.active .working{
 .pointer{
     cursor:pointer;
 }
+.pointer-none{
+    pointer-events:none;
+}
 /* clip paths */
 .clip-path{
     clip-path: inset(0) !important;
@@ -1558,6 +1588,10 @@ button.post.active .working{
 }
 .bg-black{
     background:black;
+
+}
+.bg-black-transparent{
+    background:rgba(0,0,0,0.4);
 }
 .bg-primary{
     background:var(--primary);
@@ -1585,6 +1619,9 @@ button.post.active .working{
 }
 .bg-green{
     background:var(--green);
+}
+.bg-average-green{
+    background:#4caf50;
 }
 .bg-green-transparent{
     background:rgba(0,255,0,0.1);
@@ -1628,6 +1665,9 @@ button.post.active .working{
 }
 .c-primary{
     color:var(--primary) !important;
+}
+.c-primary-text{
+    color:var(--primary-text) !important;
 }
 .c-transparent{
     color:transparent !important;
@@ -1856,6 +1896,97 @@ button.post.active .working{
 }
 .left-0{
     left:0;
+}
+.top-10{
+    top:10px;
+
+}
+.left-10{
+    left:10px;
+}
+.right-10{
+    right:10px;
+}
+.bottom-10{
+    bottom:10px;
+}
+.top-20{
+    top:20px;
+
+}
+.left-20{
+    left:20px;
+}
+.right-20{
+    right:20px;
+}
+.bottom-20{
+    bottom:20px;
+
+}
+.top-30{
+    top:30px;
+
+}
+.left-30{
+    left:30px;
+}
+.right-30{
+    right:30px;
+}
+.bottom-30{
+    bottom:30px;
+}
+.top-40{
+    top:40px;
+
+}
+.left-40{
+    left:40px;
+}
+.right-40{
+    right:40px;
+}
+.bottom-40{
+    bottom:40px;
+}
+.top-50{
+    top:50px;
+
+}
+.left-50{
+    left:50px;
+}
+.right-50{
+    right:50px;
+}
+.bottom-50{
+    bottom:50px;
+}
+.top-100{
+    top:10px;
+
+}
+.left-100{
+    left:100px;
+}
+.right-100{
+    right:100px;
+}
+.bottom-100{
+    bottom:100px;
+}
+.translate-x-negative-half{
+    transform:translateX(-50%);
+}
+.translate-x-positive-half{
+    transform:translateX(50%);
+}
+.translate-y-negative-half{
+    transform:translateY(-50%);
+}
+.translate-y-negative-half{
+    transform:translateY(50%);
 }
 .top-full{
     top:100%;
@@ -2207,16 +2338,16 @@ html{
     background:linear-gradient(to right,transparent,rgba(112, 128, 144, 0.2),transparent);
     animation:shimmer 2.5s linear infinite;
 }
-.lazy-load{
+.lazy-loads{
     position:relative;
     clip-path:inset(0);
     overflow:hidden;
 
 }
-.lazy-load *{
+.lazy-loads *{
     opacity:0;
 }
-.lazy-load::before{
+.lazy-loads::before{
     content: '';
     position:absolute;
     top:0;
@@ -2293,6 +2424,11 @@ html{
 .pc-x-padding{
     padding-left:10vw;
     padding-right:10vw;
+
+}
+.pc-x-padding-2{
+    padding-left:15vw;
+    padding-right:15vw;
 
 }
 .pc-display-none{

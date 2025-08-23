@@ -135,7 +135,7 @@ function CreateNotify(status,message){
   section.classList.add(status);
   section.innerHTML=` <div class="row g-5 w-full p-5 body space-between align-center">
             <div class="icon"></div>
-            <div class="message right-auto">
+            <div class="message m-right-auto">
             ${message}
         </div>
         <div onclick="HideNotify()" class="close pc-pointer bottom-auto"></div>
@@ -337,45 +337,24 @@ function UnEmpty(){
     }
 }
 // single page navigation
-async function spa(event,url,element=null){
+async function spa(event,url,callback=null){
   try{
       // select main 
     let main=document.querySelector('main');
     //    add active class to the bottom nav
-    if(element !== null){
-        let navs=document.querySelectorAll('footer .nav');
-        navs.forEach((nav)=>{
-            nav.classList.remove('active');
-        })
-            element.classList.add('active');
-        }
-        // skeleton load
-        let clean_url=url.split('?')[0];
-       // alert(clean_url);
+    // if(element !== null){
+    //     let navs=document.querySelectorAll('footer .nav');
+    //     navs.forEach((nav)=>{
+    //         nav.classList.remove('active');
+    //     })
+    //         element.classList.add('active');
+    //     }
+      
 
-        let skeletons={
-            'users/dashboard' : 'home',
-            'users/recharge' : 'recharge',
-            'users/wallet' : 'wallet',
-            'users/profile' : 'profile',
-            'users/bank' : 'bank',
-            'users/withdraw' : 'withdraw',
-            'users/invite' : 'refer',
-            'users/products' : 'products',
-            'users/team' : 'team'
-
-        }
-        let skeleton;
-       for(let key in skeletons){
-        if(clean_url.endsWith(key)){
-            skeleton=skeletons[key];
-            break;
-           
-        }
-       }
-      let page_skeleton=document.querySelector('template.skeleton.' + skeleton);
-      if(page_skeleton){
-        main.innerHTML=page_skeleton.innerHTML;
+      
+      let spa_loader=document.querySelector('template.spa_loader');
+      if(spa_loader){
+        main.innerHTML=spa_loader.innerHTML;
       }
 
         // fetch page
@@ -467,10 +446,13 @@ async function spa(event,url,element=null){
             // push state
             history.pushState({},'',url);
             document.title=div.querySelector('title').innerText;
+            if(callback !== null){
+                callback(event,url);
+            }
             
             
         }else{
-            main.innerHTML=` <section class="column grid-full y-auto align-center no-select x-auto g-5">
+            main.innerHTML=` <section class="column grid-full m-y-auto align-center no-select m-x-auto g-5">
         <div class="spa-error h-100 w-100"></div>
         <span class="desc bold  c-primary">${response.status} Error</span>
         <span>Oops! an unknown error occured</span>
@@ -480,6 +462,46 @@ async function spa(event,url,element=null){
   }catch(error){
     CreateNotify('error',error.stack);
   }
+}
+// remove classes from elements
+function RemoveClasses(elements,class_name){
+    if(elements){
+        elements.forEach((element)=>{
+            element.classList.remove(class_name);
+        });
+    }
+
+}
+// add classes from elements
+function AddClasses(elements,class_name){
+    if(elements){
+        elements.forEach((element)=>{
+            element.classList.add(class_name);
+        });
+    }
+
+}
+// add class to a single element
+function AddClass(element,class_name){
+   try{
+     if(element){
+    
+            element.classList.add(class_name);
+     
+    }
+
+   }catch(error){
+    alert(error.stack)
+   }
+}
+// remove class from a single element
+function RemoveClass(element,class_name){
+    if(element){
+      
+            element.classList.remove(class_name);
+     
+    }
+
 }
 // toggle nav group
 function ToggleNavGroup(element){
@@ -508,6 +530,36 @@ function AutoFill(val,input,element){
    }
 
 
+}
+// placehoder input focus detection
+function HandleFocus(){
+    let placeholder_input=document.querySelectorAll('.placeholder-input');
+    if(placeholder_input){
+        placeholder_input.forEach((input)=>{
+          input.addEventListener('focus',()=>{
+              let cont=input.closest('.cont');
+            if(cont){
+                cont.classList.add('border-color-primary');
+            }
+          })
+        })
+    }
+}
+// placehoder input unfocus detection
+function HandleBlur(){
+    let placeholder_input=document.querySelectorAll('.placeholder-input');
+    if(placeholder_input){
+        placeholder_input.forEach((input)=>{
+           input.addEventListener('blur',()=>{
+             let cont=input.closest('.cont');
+            if(cont){
+              if(input.value == ''){
+                  cont.classList.remove('border-color-primary');
+              }
+            }
+           })
+        })
+    }
 }
 // calling functions
 
