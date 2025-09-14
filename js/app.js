@@ -350,32 +350,10 @@ async function spa(event,url,element=null){
             element.classList.add('active');
         }
         // skeleton load
-        let clean_url=url.split('?')[0];
-       // alert(clean_url);
-
-        let skeletons={
-            'users/dashboard' : 'home',
-            'users/recharge' : 'recharge',
-            'users/wallet' : 'wallet',
-            'users/profile' : 'profile',
-            'users/bank' : 'bank',
-            'users/withdraw' : 'withdraw',
-            'users/invite' : 'refer',
-            'users/products' : 'products',
-            'users/team' : 'team'
-
-        }
-        let skeleton;
-       for(let key in skeletons){
-        if(clean_url.endsWith(key)){
-            skeleton=skeletons[key];
-            break;
-           
-        }
-       }
-      let page_skeleton=document.querySelector('template.skeleton.' + skeleton);
-      if(page_skeleton){
-        main.innerHTML=page_skeleton.innerHTML;
+      
+      let spa_loader=document.querySelector('template.spa_loader');
+      if(spa_loader){
+        main.innerHTML=spa_loader.innerHTML;
       }
 
         // fetch page

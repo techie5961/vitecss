@@ -1,22 +1,22 @@
 :root{
     /* primary color */
-    --primary:rgb(0, 178, 248);
+    --primary:#00674f;
     /* color on element with background as primary color */
     --primary-text:white;
     /* transparent of primary color */
-    --primary-transparent:rgb(0, 255, 255,0.1);
+    --primary-transparent:rgb(0, 103, 79,0.1);
     /* darker primary color */
-     --primary-dark:rgb(0, 145, 125);
+     --primary-dark:#023f31;
      /* secondary color */
-    --secondary:rgb(162,232,143);
+    --secondary:yellow;
     /* primary font */
-    --font:'libertinus sans';
+    --font:'teachers';
     /* background color */
-    --bg:whitesmoke;
+    --bg:black;
     /* primary light color for cards etc */
-    --bg-light:white;
+    --bg-light:#222;
     /* text color */
-    --text:black;
+    --text:white;
     /* lower z index */
     --z-index-low:3000;
     /* average z index */
@@ -28,7 +28,7 @@
     /* dim color for cards etc usually grey */
     --bg-dim:rgb(231, 231, 231,0.5);
     /* gradient color usually combo of primary and secondary */
-    --gradient:linear-gradient(to right,rgb(0,191,166),rgb(162,232,143));
+    --gradient:linear-gradient(to right,var(--primary),var(--secondary));
     /* button text color for btn,posts button etc */
     --btn-text:white;
     /* gradient of text with gradiented background clipped */
@@ -63,6 +63,7 @@ body{
     font-family:var(--font);
     overflow:auto;
     font-size:0.8rem;
+    color:var(--text)
 
 }
 main{
@@ -250,6 +251,15 @@ hr.gradient{
     font-family:var(--font);
     
 
+}
+input,select,textarea{
+    color:var(--text)
+}
+.cont{
+    background:var(--bg) !important;
+}
+input::placeholder{
+    color:#708090;
 }
 input{
     caret-color:var(--primary);
@@ -1548,9 +1558,18 @@ button.post.active .working{
 .bg-white-transparent{
     background:rgba(255,255,255,0.5);
 
+
+}
+.bg-white-light{
+    background:rgba(255,255,255,0.1);
+
 }
 .bg-black-transparent{
     background:rgba(0,0,0,0.5);
+
+}
+.bg-black-light{
+    background:rgba(0,0,0,0.1);
 
 }
 .bg-dim-transparent{
