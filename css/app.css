@@ -1,14 +1,14 @@
 :root{
     /* primary color */
-    --primary:#00674f;
+    --primary:#ffd700;
     /* color on element with background as primary color */
-    --primary-text:white;
+    --primary-text:black;
     /* transparent of primary color */
-    --primary-transparent:rgb(0, 103, 79,0.1);
+    --primary-transparent:rgba(255, 215, 0,0.1);
     /* darker primary color */
-     --primary-dark:#023f31;
+     --primary-dark:#3b3302;
      /* secondary color */
-    --secondary:yellow;
+    --secondary:white;
     /* primary font */
     --font:'teachers';
     /* background color */
@@ -311,26 +311,44 @@ input.empty,select.empty,.cont.empty{
 input{
     padding:10px;
 }
+.spa-loader{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    margin:auto auto;
+    color:var(---text);
+}
+.spa-loader svg{
+    height:100px;
+    width:100px;
+    fill:currentColor;
+}
 /* button */
-button.active{
-    /* -webkit-mask:var(--svg) no-repeat center;
-    background-color:red; */
-    background-image:var(--svg) !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    color:transparent !important;
-    pointer-events: none !important;
+button.active *:not(.svg-loader):not(.svg-loader *){
    
+   display:none;
 
+}
+button.active .svg-loader{
+    color:inherit;
+}
+button.active .svg-loader svg{
+  
+    height:var(--size);
+    width:var(--size);
+    fill:currentColor;
+
+}
+
+button.active{
+    pointer-events:none;
 }
 button.disabled{
     filter:grayscale(90%);
     pointer-events:none;
 }
-button.active *{
-   opacity:0 !important;
-   color:transparent !important;
-}
+
 .btn-primary{
     height:fit-content;
     width:fit-content;
@@ -351,6 +369,8 @@ button.active *{
     gap:10px;
     font-family: var(--font);
     --background:var(--primary);
+     --height:20px;
+     --size:0.8rem;
     
 }
 
@@ -361,7 +381,7 @@ button.active *{
     --background:var(--primary);
     border:none;
     border-radius:10px;
-    color:white;
+    color:var(--primary-text);
     font-family:var(--font);
     user-select:none;
     clip-path: inset(0 round 10px);
@@ -375,6 +395,8 @@ button.active *{
     gap:10px;
     font-family: var(--font);
     border-bottom:2px solid var(--primary-dark);
+    --height:20px;
+    --size:0.8rem;
 }
 .btn-blue-3d{
     height:fit-content;
@@ -397,6 +419,8 @@ button.active *{
     gap:10px;
     font-family: var(--font);
     border-bottom:2px solid rgb(166, 166, 255);
+     --height:20px;
+     --size:0.8rem;
 }
 .btn-red{
     height:fit-content;
@@ -418,6 +442,7 @@ button.active *{
     justify-content: center;
     gap:10px;
     font-family: var(--font);
+    --size:0.8rem;
 
 }
 
@@ -441,6 +466,8 @@ button.active *{
     justify-content: center;
     gap:10px;
     font-family:var(--font);
+     --height:20px;
+     --size:0.8rem;
     
 }
 .btn-green-3d{
@@ -466,6 +493,8 @@ button.active *{
     font-family:var(--font);
     border-bottom:2px solid green;
     color:black;
+     --height:20px;
+     --size:0.8rem;
     
 }
 .btn-red-3d{
@@ -489,6 +518,8 @@ button.active *{
     gap:10px;
     font-family:var(--font);
     border-bottom:2px solid coral;
+     --height:20px;
+     --size:0.8rem;
    
     
 }
@@ -513,6 +544,8 @@ button.active *{
     gap:10px;
     font-family:var(--font);
     border-bottom:2px solid #4d4209;
+     --height:20px;
+     --size:0.8rem;
    
     
 }
@@ -535,6 +568,7 @@ button.active *{
     justify-content: center;
     gap:10px;
     font-family:var(--font);
+    --size:0.8rem;
     
 }
 .btn-blue{
@@ -556,6 +590,7 @@ button.active *{
     justify-content: center;
     gap:10px;
     font-family:var(--font);
+    --size:0.8rem;
     
 }
 .btn{
@@ -602,6 +637,7 @@ button.active *{
     gap:5px;
     color:var(--primary);
     font-family:var(--font);
+    --size:0.8rem;
 
 }
 .btn-red-border{
@@ -623,6 +659,7 @@ button.active *{
     gap:5px;
     color:red;
     font-family:var(--font);
+    --size:0.8rem;
 
 }
 .btn-green-border{
@@ -644,6 +681,7 @@ button.active *{
     gap:5px;
     color:var(--green);
     font-family: var(--font);
+    --size:0.8rem;
 
 }
 .btn-primary-border{
@@ -665,6 +703,7 @@ button.active *{
     gap:5px;
     color:var(--primary);
     font-family: var(--font);
+    --size:0.8rem;
 
 }
 .btn-gold-border{
@@ -686,6 +725,7 @@ button.active *{
     gap:5px;
     color:#ffd700;
     font-family:var(--font);
+    --size:0.8rem;
 
 }
 .btn-blue-border{
@@ -707,6 +747,7 @@ button.active *{
     gap:5px;
     color:blue;
     font-family:var(--font);
+    --size:0.8rem;
 
 }
 button.post{
@@ -716,7 +757,7 @@ button.post{
     align-items:center;
     justify-content:center;
     border:none;
-    color:var(--btn-text);
+    color:var(--primary-text);
     background:var(--primary);
     height:50px;
     border-radius:10px;
@@ -724,6 +765,7 @@ button.post{
     margin:10px 0;
     cursor:pointer;
     clip-path:inset(0 round 10px);
+    --size:30px;
 }
 button.post .working{
     display:none;
@@ -1583,6 +1625,9 @@ button.post.active .working{
 }
 .bg-primary-transparent{
     background:var(--primary-transparent);
+}
+.bg-primary-dark{
+    background:var(--primary-dark);
 }
 .bg-secondary{
     background:var(--bg-secondary);

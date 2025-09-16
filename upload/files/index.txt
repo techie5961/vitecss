@@ -1,19 +1,15 @@
-Transfer the deposit to the account details provided above.
-
-After payment, complete the deposit form by entering:
-
-Bank Sent From
-
-Name on Account Sent From
-
-Amount Sent
-
-Transaction Reference (if any)
-
-
-Ensure the details match your transfer to avoid delays.
-
-Keep your payment receipt until your deposit is confirmed.
-
-For assistance, contact our support team.
-
+function WrapBtnText(element) {
+  // Go through all child nodes
+  element.childNodes.forEach(node => {
+    // Only target raw text nodes
+    if (node.nodeType === Node.TEXT_NODE) {
+      let text = node.textContent.trim();
+      if (text.length > 0) {
+        // Replace the text node with a span wrapping it
+        let span = document.createElement('span');
+        span.textContent = text;
+        node.replaceWith(span);
+      }
+    }
+  });
+}
