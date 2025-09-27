@@ -144,3 +144,55 @@
     src: url('Outfit/static/Outfit-ExtraLight.ttf');
     font-weight:100;
 }
+@font-face {
+    font-family: 'afacad flux';
+    src: url('Afacad_Flux/static/AfacadFlux-Regular.ttf');
+}
+@font-face {
+    font-family: 'afacad flux';
+    src: url('Afacad_Flux/static/AfacadFlux-Bold.ttf');
+    font-weight:700;
+}
+@font-face {
+    font-family: 'afacad flux';
+    src: url('Afacad_Flux/static/AfacadFlux-ExtraBold.ttf');
+    font-weight:900;
+}
+@font-face {
+    font-family: 'afacad flux';
+    src: url('Afacad_Flux/static/AfacadFlux-Light.ttf');
+    font-weight:100;
+}
+@font-face {
+    font-family: 'faster one';
+    src: url('Faster_One/FasterOne-Regular.ttf');
+
+}
+@font-face {
+    font-family: 'tilt prism';
+    src: url('Tilt_Prism/TiltPrism-Regular-VariableFont_XROT\,YROT.ttf');
+}
+@font-face {
+    font-family: 'outfit';
+    src: url('Outfit/static/Outfit-Regular.ttf');
+}
+@font-face {
+    font-family: 'outfit';
+    src: url('Outfit/static/Outfit-ExtraBold.ttf');
+    font-weight:900;
+}
+@font-face {
+    font-family: 'outfit';
+    src: url('Outfit/static/Outfit-Bold.ttf');
+    font-weight:700;
+}
+@font-face {
+    font-family: 'outfit';
+    src: url('Outfit/static/Outfit-SemiBold.ttf');
+    font-weight:600;
+}
+@font-face {
+    font-family: 'outfit';
+    src: url('Outfit/static/Outfit-Light.ttf');
+    font-weight: 100;
+}

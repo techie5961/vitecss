@@ -201,10 +201,10 @@ function CreateNotify(status,message){
   section.classList.add(status);
   section.innerHTML=` <div class="row g-5 w-full p-5 body space-between align-center">
             <div class="icon"></div>
-            <div class="message right-auto">
+            <div class="message m-right-auto">
             ${message}
         </div>
-        <div onclick="HideNotify()" class="close pc-pointer bottom-auto"></div>
+        <div onclick="HideNotify()" class="close pc-pointer m-bottom-auto"></div>
         </div>
         <div class="footer">
             <span></span>

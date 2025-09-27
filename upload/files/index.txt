@@ -1,15 +1,32 @@
-function WrapBtnText(element) {
-  // Go through all child nodes
-  element.childNodes.forEach(node => {
-    // Only target raw text nodes
-    if (node.nodeType === Node.TEXT_NODE) {
-      let text = node.textContent.trim();
-      if (text.length > 0) {
-        // Replace the text node with a span wrapping it
-        let span = document.createElement('span');
-        span.textContent = text;
-        node.replaceWith(span);
-      }
-    }
-  });
-}
+Frequently Asked Questions
+Find quick answers to common questions about SpicyAds
+
+Search for questions...
+1. What is SpicyAds?
+SpicyAds is an online earning platform where users can complete tasks, spin-and-win for rewards, and place adverts. It is designed to be simple, secure, and rewarding for everyone.
+
+2. How do I start earning on SpicyAds?
+Simply create an account, log in, and explore available tasks. You can also use the spin-and-win feature or place adverts if you want to promote your business while earning.
+
+3. How are payments made?
+Earnings are credited to your SpicyAds wallet. You can withdraw using supported payment methods such as bank transfer or mobile money, depending on your region.
+
+4. Can I have more than one account?
+No. Each user is allowed only one account. Creating multiple accounts for unfair advantage will lead to suspension and loss of earnings.
+
+5. Is advertising on SpicyAds effective?
+Yes. By placing adverts on SpicyAds, you reach a growing community of active users. This helps businesses gain visibility and engagement while also rewarding users.
+
+6. How does the spin-and-win feature work?
+The spin-and-win feature gives users the chance to earn extra rewards. Spins may include bonuses, extra task earnings, or discounts on adverts.
+
+7. What happens if I violate the rules?
+Accounts found engaging in fraud, spamming, or policy violations may be suspended or permanently terminated. Balances from such accounts will be forfeited.
+
+8. How do I contact support?
+You can reach us anytime at support@spicyads.com. Our team is ready to help you with any issues or questions.
+
+Still have questions?
+If you couldn't find the answer to your question, feel free to contact our support team.
+
+Email: support@spicyads.com
