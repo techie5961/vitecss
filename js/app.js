@@ -1,6 +1,10 @@
+
+
 function SpaLoader(element){
     // spa loader to be updated nased on script
-    let loader=` <div class="spa-loader"><svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" rx="1" width="10" height="10"><animate id="spinner_c7A9" begin="0;spinner_23zP.end" attributeName="x" dur="0.2s" values="1;13" fill="freeze"/><animate id="spinner_Acnw" begin="spinner_ZmWi.end" attributeName="y" dur="0.2s" values="1;13" fill="freeze"/><animate id="spinner_iIcm" begin="spinner_zfQN.end" attributeName="x" dur="0.2s" values="13;1" fill="freeze"/><animate id="spinner_WX4U" begin="spinner_rRAc.end" attributeName="y" dur="0.2s" values="13;1" fill="freeze"/></rect><rect x="1" y="13" rx="1" width="10" height="10"><animate id="spinner_YLx7" begin="spinner_c7A9.end" attributeName="y" dur="0.2s" values="13;1" fill="freeze"/><animate id="spinner_vwnJ" begin="spinner_Acnw.end" attributeName="x" dur="0.2s" values="1;13" fill="freeze"/><animate id="spinner_KQuy" begin="spinner_iIcm.end" attributeName="y" dur="0.2s" values="1;13" fill="freeze"/><animate id="spinner_arKy" begin="spinner_WX4U.end" attributeName="x" dur="0.2s" values="13;1" fill="freeze"/></rect><rect x="13" y="13" rx="1" width="10" height="10"><animate id="spinner_ZmWi" begin="spinner_YLx7.end" attributeName="x" dur="0.2s" values="13;1" fill="freeze"/><animate id="spinner_zfQN" begin="spinner_vwnJ.end" attributeName="y" dur="0.2s" values="13;1" fill="freeze"/><animate id="spinner_rRAc" begin="spinner_KQuy.end" attributeName="x" dur="0.2s" values="1;13" fill="freeze"/><animate id="spinner_23zP" begin="spinner_arKy.end" attributeName="y" dur="0.2s" values="1;13" fill="freeze"/></rect></svg></div>
+    let loader=` <div class="spa-loader">
+  <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><filter id="spinner-gF01"><feGaussianBlur in="SourceGraphic" stdDeviation="1" result="y"/><feColorMatrix in="y" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 18 -7" result="z"/><feBlend in="SourceGraphic" in2="z"/></filter></defs><g filter="url(#spinner-gF01)"><circle cx="5" cy="12" r="4"><animate attributeName="cx" calcMode="spline" dur="2s" values="5;8;5" keySplines=".36,.62,.43,.99;.79,0,.58,.57" repeatCount="indefinite"/></circle><circle cx="19" cy="12" r="4"><animate attributeName="cx" calcMode="spline" dur="2s" values="19;16;19" keySplines=".36,.62,.43,.99;.79,0,.58,.57" repeatCount="indefinite"/></circle><animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 12 12;360 12 12" repeatCount="indefinite"/></g></svg>
+    </div>
 `;
     element.innerHTML=loader;
 }
@@ -201,10 +205,10 @@ function CreateNotify(status,message){
   section.classList.add(status);
   section.innerHTML=` <div class="row g-5 w-full p-5 body space-between align-center">
             <div class="icon"></div>
-            <div class="message right-auto">
+            <div class="message m-right-auto">
             ${message}
         </div>
-        <div onclick="HideNotify()" class="close pc-pointer bottom-auto"></div>
+        <div onclick="HideNotify()" class="close pc-pointer m-bottom-auto"></div>
         </div>
         <div class="footer">
             <span></span>
@@ -388,9 +392,10 @@ function SetWindowHeight(){
     document.body.style.minHeight=height + 'px';
 }
 // remove empty class from inputs and conts
+
 function UnEmpty(){
     let inps=document.querySelectorAll('.inp.required');
-    
+ //   alert(10)
     if(inps){
         inps.forEach((inp)=>{
            inp.addEventListener('focus',()=>{
@@ -404,6 +409,7 @@ function UnEmpty(){
         })
     }
 }
+
 // single page navigation
 async function spa(event,url,element=null){
   try{
@@ -553,9 +559,9 @@ function AutoFill(val,input,element){
 // calling functions
 
 
-window.onload=function(){
+window.addEventListener('load',function(){
     HideLoading();
     SetWindowHeight();
     UnEmpty();
     
-}
+})

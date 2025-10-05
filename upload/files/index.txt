@@ -1,15 +1,1 @@
-function WrapBtnText(element) {
-  // Go through all child nodes
-  element.childNodes.forEach(node => {
-    // Only target raw text nodes
-    if (node.nodeType === Node.TEXT_NODE) {
-      let text = node.textContent.trim();
-      if (text.length > 0) {
-        // Replace the text node with a span wrapping it
-        let span = document.createElement('span');
-        span.textContent = text;
-        node.replaceWith(span);
-      }
-    }
-  });
-}
+The Airtime portal is now active and accessible. Users can proceed with airtime purchases and related services while the portal remains open.
