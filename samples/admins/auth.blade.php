@@ -53,7 +53,7 @@
             <input type="password" name="password" placeholder="Password" class="inp input">
           <div class="prompt"><i>Required</i></div>
         </div>
-        <button style="font-family:pacifico;font-weight:bold;background:#ffd700;" class="btn top-20 bottom-20">Login Safely</button>
+        <button style="font-family:pacifico;font-weight:bold;background:#ffd700;" class="btn top-20 m-bottom-20">Login Safely</button>
     </form>
     {{-- from blade extends --}}
     </main>

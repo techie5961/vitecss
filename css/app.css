@@ -1,6 +1,8 @@
 :root{
     /* primary color */
     --primary:#ffd700;
+    /* light primary color */
+    --primary-light:#f7e372;
     /* color on element with background as primary color */
     --primary-text:black;
     /* transparent of primary color */
@@ -16,7 +18,7 @@
     /* secondary text color */
     --secondary-text:white;
     /* primary font */
-    --font:'teachers';
+    --font:'dm sans';
     /* background color */
     --bg:#490422;
     /* bg secondary */
@@ -25,8 +27,10 @@
     --bg-secondary-dark:#2a0012;
      /* bg secondary light */
     --bg-secondary-light:rgba(148, 9, 69,0.1);
-    /* primary light color for cards etc */
+    /* light background color */
     --bg-light:#88043d;
+    /* dark background color */
+    --bg-dark:#rgb(59, 3, 27)
     /* text color */
     --text:white;
     /* lower z index */
@@ -40,7 +44,7 @@
     /* dim color for cards etc usually grey */
     --bg-dim:rgb(231, 231, 231,0.5);
     /* gradient color usually combo of primary and secondary */
-    --gradient:linear-gradient(to right,var(--primary),var(--secondary));
+    --gradient:linear-gradient(to right,var(--primary),var(--primary-dark));
     /* button text color for btn,posts button etc */
     --btn-text:white;
     /* gradient of text with gradiented background clipped */
@@ -160,7 +164,17 @@ main{
          transform:rotate(360deg);
     }
 }
-
+.animation-scale-in-out{
+    animation:scale-in-out 1s linear forwards;
+}
+@keyframes scale-in-out{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(0.9);
+    }
+}
 
 /* nav */
 .nav{
@@ -184,8 +198,38 @@ main{
     background-size:cover;
     
 }
-.opacity-transparent{
+.opacity-transparent,.opacity-0{
     opacity:0;
+}
+.opacity-01{
+    opacity:0.1;
+}
+.opacity-02{
+    opacity:0.2;
+}
+.opacity-03{
+    opacity:0.3;
+}
+.opacity-04{
+    opacity:0.4;
+}
+.opacity-05{
+    opacity:0.5;
+}
+.opacity-06{
+    opacity:0.6;
+}
+.opacity-07{
+    opacity:0.7;
+}
+.opacity-08{
+    opacity:0.8;
+}
+.opacity-09{
+    opacity:0.9;
+}
+.opacity-1{
+    opacity:1;
 }
  .placeholder-bold::placeholder{
             font-weight: bold;
@@ -320,7 +364,7 @@ img{
     max-width:40px;
     border-radius:50%;
 }
-.gradient{
+.bg-primary-gradient{
     background:var(--gradient) !important;
 }
 hr{
@@ -993,6 +1037,16 @@ button.post.active .working{
 .border-top-2{
      border-top:2px solid;
 }
+.border-color-bg{
+    border-color:var(--bg);
+}
+.border-color-bg-light{
+    border-color:var(--bg-light);
+}
+.border-color-bg-dark{
+    border-color:var(--bg-dark);
+}
+
 .border-color-dim{
     border-color:var(--bg-dim);
     border-color:#708090;
@@ -1002,6 +1056,12 @@ button.post.active .working{
 }
 .border-color-primary{
     border-color:var(--primary);
+}
+.border-color-primary-light{
+    border-color:var(--primary-light);
+}
+.border-color-primary-dark{
+    border-color:var(--primary-dark);
 }
 .border-color-secondary{
     border-color:var(--secondary);
@@ -1643,8 +1703,32 @@ button.post.active .working{
 .font-1{
     font-size:1rem;
 }
-.bold{
-    font-weight:bold;
+.font-weight-100{
+    font-weight:100;
+}
+.font-weight-200{
+    font-weight:200;
+}
+.font-weight-300{
+    font-weight:300;
+}
+.font-weight-400{
+    font-weight:400;
+}
+.font-weight-500{
+    font-weight:500;
+}
+.font-weight-600{
+    font-weight:600;
+}
+.bold,.font-weight-700{
+    font-weight:700;
+}
+.font-weight-800{
+    font-weight:800;
+}
+.font-weight-900{
+    font-weight:900;
 }
 .u{
     text-decoration:underline;
@@ -1765,6 +1849,9 @@ button.post.active .working{
 }
 .bg-dim-transparent{
     background:rgba(112, 128, 144, 0.5);
+}
+.bg-708090{
+    background-color:#708090;
 }
 .bg-black{
     background:black;
@@ -2040,21 +2127,51 @@ button.post.active .working{
 }
 
 /* z index */
-.highest,.higher{
+.highest,.higher,.z-index-highest{
     z-index:var(--z-index-highest);
 }
-.high{
+.high,.z-index-high{
     z-index:var(--z-index-high);
 }
-.average{
+.average,.z-index-average{
     z-index:var(--z-index-low);
 }
-.low{
+.low,.z-index-low{
     z-index:var(--z-index-low);
 }
 .pos-stick,.pos-sticky{
     position:sticky !important;
   
+}
+.z-index-1000{
+z-index: 1000;
+}
+.z-index-2000{
+z-index: 2000;
+}
+.z-index-3000{
+z-index: 3000;
+}
+.z-index-4000{
+z-index: 4000;
+}
+.z-index-5000{
+z-index: 5000;
+}
+.z-index-6000{
+z-index: 6000;
+}
+.z-index-7000{
+z-index: 7000;
+}
+.z-index-8000{
+z-index: 8000;
+}
+.z-index-9000{
+z-index: 9000;
+}
+.z-index-10000{
+z-index: 10000;
 }
 .stick-top{
       top:0;
@@ -2079,6 +2196,7 @@ button.post.active .working{
 .top-0{
     top:0;
 }
+
 .bottom-0{
     bottom:0;
 }
@@ -2112,6 +2230,54 @@ button.post.active .working{
 }
 .right-half{
     right:50%;
+}
+.top-10{
+    top:10px;
+}
+.left-10{
+    left:10px;
+}
+.right-10{
+    right:10px;
+}
+.bottom-10{
+    bottom:10px;
+}
+.top-20{
+    top:20px;
+}
+.left-20{
+    left:20px;
+}
+.right-20{
+    right:20px;
+}
+.bottom-20{
+    bottom:20px;
+}
+.top-30{
+    top:30px;
+}
+.left-30{
+    left:30px;
+}
+.right-30{
+    right:30px;
+}
+.bottom-30{
+    bottom:30px;
+}
+.top-40{
+    top:40px;
+}
+.left-40{
+    left:40px;
+}
+.right-40{
+    right:40px;
+}
+.bottom-40{
+    bottom:40px;
 }
 .pos-reletive,.pos-relative{
     position:relative !important;

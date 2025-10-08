@@ -47,31 +47,7 @@
     font-family: 'dancing script';
     src: url('Dancing_Script/DancingScript-VariableFont_wght.ttf');
 }
-@font-face {
-    font-family: 'dm sans';
-    src: url('DM_Sans/static/DMSans-Regular.ttf');
-}
-@font-face {
-    font-family: 'dm sans';
-    src: url('DM_Sans/static/DMSans-Bold.ttf');
-    font-weight:700;
-}
-@font-face {
-    font-family: 'dm sans';
-    src: url('DM_Sans/static/DMSans-ExtraBold.ttf');
-    font-weight:900;
-}
-@font-face {
-    font-family: 'dm sans';
-    src: url('DM_Sans/static/DMSans_18pt-Light.ttf');
-    font-weight:100;
-}
 
-@font-face {
-    font-family: 'dm sans';
-    src: url('DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.ttf');
-    font-style: italic;
-}
 @font-face {
     font-family: 'pacifico';
     src: url('Pacifico/Pacifico-Regular.ttf');
@@ -143,4 +119,267 @@
     font-family: 'outfit';
     src: url('Outfit/static/Outfit-ExtraLight.ttf');
     font-weight:100;
+}
+@font-face {
+    font-family: 'manrope';
+    src: url('Manrope/static/Manrope-Regular.ttf');
+    font-weight:400;
+}
+@font-face {
+    font-family: 'manrope';
+    src: url('Manrope/static/Manrope-Bold.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'manrope';
+    src: url('Manrope/static/Manrope-ExtraBold.ttf');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'manrope';
+    src: url('Manrope/static/Manrope-ExtraLight.ttf');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'manrope';
+    src: url('Manrope/static/Manrope-Light.ttf');
+    font-weight:300;
+}
+@font-face {
+    font-family: 'manrope';
+    src: url('Manrope/static/Manrope-Medium.ttf');
+    font-weight:500;
+}
+@font-face {
+    font-family: 'manrope';
+    src: url('Manrope/static/Manrope-SemiBold.ttf');
+    font-weight:600;
+}
+@font-face {
+    font-family: 'quicksand';
+    src: url('Quicksand/static/Quicksand-Bold.ttf');
+    font-weight:700 ;
+}
+@font-face {
+    font-family: 'quicksand';
+    src: url('Quicksand/static/Quicksand-Light.ttf');
+    font-weight:300;
+}
+@font-face {
+    font-family: 'quicksand';
+    src: url('Quicksand/static/Quicksand-Medium.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'quicksand';
+    src: url('Quicksand/static/Quicksand-Regular.ttf');
+    font-weight:400;
+}
+@font-face {
+    font-family: 'quicksand';
+    src: url('Quicksand/static/Quicksand-SemiBold.ttf');
+    font-weight:600;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-Black.ttf');
+    font-weight:900;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-BlackItalic.ttf');
+    font-weight:900;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-Bold.ttf');
+    font-weight:700;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-BoldItalic.ttf');
+    font-weight:700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-ExtraBold.ttf');
+    font-weight:800;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-ExtraBoldItalic.ttf');
+    font-weight:800;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-ExtraLight.ttf');
+    font-weight:200;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-ExtraLightItalic.ttf');
+    font-weight:200;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-Italic.ttf');
+    font-weight:400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-Light.ttf');
+    font-weight:300;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-LightItalic.ttf');
+    font-weight:300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-Medium.ttf');
+    font-weight:500;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-MediumItalic.ttf');
+    font-weight:500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-Regular.ttf');
+    font-weight:400;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-SemiBold.ttf');
+    font-weight:600;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-SemiBoldItalic.ttf');
+    font-weight:600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-Thin.ttf');
+    font-weight:100;
+}
+@font-face {
+    font-family: 'urbanist';
+    src: url('Urbanist/static/Urbanist-ThinItalic.ttf');
+    font-weight:100;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-Black.ttf');
+    font-weight: 900;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-BlackItalic.ttf');
+    font-weight: 900;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-Bold.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-BoldItalic.ttf');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-ExtraBold.ttf');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-ExtraBoldItalic.ttf');
+    font-weight: 800;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-ExtraLight.ttf');
+    font-weight:200;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-ExtraLightItalic.ttf');
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-Italic.ttf');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-Light.ttf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-LightItalic.ttf');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-Medium.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-MediumItalic.ttf');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-Regular.ttf');
+    font-weight: 400;
+
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-SemiBold.ttf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-SemiBoldItalic.ttf');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-Thin.ttf');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'dm sans';
+    src: url('DM_Sans/static/DMSans-ThinItalic.ttf');
+    font-weight: 100;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'bowl';
+    src: url('BowlByOneSC/BowlbyOneSC-Regular.ttf');
 }

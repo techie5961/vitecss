@@ -49,40 +49,40 @@
     <section class="grid pc-grid-2 w-full g-10 p-10">
         <div class="card">
             <div class="row g-10">
-                <div style="background-image:url('{{ asset('images/users/avatar.svg') }}')" class="photo"></div>
+                <div style="background-image:url('{{ asset('images/users/avatar.jpeg') }}')" class="photo"></div>
                <div class="column g-5">
                  <b><a class="c-text" href="">Techie5961</a></b>
                 <span class="text-dim text-small row align-center g-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="CurrentColor" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"></path></svg>
                     Submitted 2 hours ago</span>
                </div>
-               <div class="status green left-auto">success</div>
+               <div class="status green m-left-auto">success</div>
             </div>
             <hr>
             <div class="grid grid-2 g-10 break-word">
                <div class="column w-full g-5">
-                 <span class="u right-auto">Bank Sent From</span>
+                 <span class="u m-right-auto">Bank Sent From</span>
                 <b class="right-auto">Standard Chartered Bank</b>
                </div>
                 <div class="column w-full g-5">
-                 <span class="u left-auto">Name on Account</span>
+                 <span class="u m-left-auto">Name on Account</span>
                 <b class="left-auto">Daniel Podence</b>
                </div>
             </div>
               <div class="grid grid-2 g-10 break-word">
                <div class="column w-full g-5">
-                 <span class="u right-auto">Account Number</span>
+                 <span class="u m-right-auto">Account Number</span>
                 <b class="right-auto">5005016577</b>
                </div>
                 <div class="column w-full g-5">
-                 <span class="u left-auto">Class</span>
+                 <span class="u m-left-auto">Class</span>
                 <b class="left-auto">credit</b>
                </div>
             </div>
-            <strong class="desc left-auto c-green">&#8358;50,000.00</strong>
+            <strong class="desc m-left-auto c-green">&#8358;50,000.00</strong>
             <hr>
             <div class="row space-between w-full g-10">
-                 <button class="btn-green left-auto">
+                 <button class="btn-green m-left-auto">
                     Approve
                 </button>
                 <button class="btn-red">
@@ -95,40 +95,40 @@
 
          <div class="card">
             <div class="row g-10">
-                <div style="background-image:url('{{ asset('images/users/avatar.svg') }}')" class="photo"></div>
+                <div style="background-image:url('{{ asset('images/users/avatar.jpeg') }}')" class="photo"></div>
                <div class="column g-5">
                  <b><a class="c-text" href="">Techie5961</a></b>
                 <span class="text-dim text-small row align-center g-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="CurrentColor" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"></path></svg>
                     Submitted 2 hours ago</span>
                </div>
-               <div class="status green left-auto">success</div>
+               <div class="status green m-left-auto">success</div>
             </div>
             <hr>
             <div class="grid grid-2 g-10 break-word">
                <div class="column w-full g-5">
-                 <span class="u right-auto">Bank Sent From</span>
+                 <span class="u m-right-auto">Bank Sent From</span>
                 <b class="right-auto">Standard Chartered Bank</b>
                </div>
                 <div class="column w-full g-5">
-                 <span class="u left-auto">Name on Account</span>
+                 <span class="u m-left-auto">Name on Account</span>
                 <b class="left-auto">Daniel Podence</b>
                </div>
             </div>
               <div class="grid grid-2 g-10 break-word">
                <div class="column w-full g-5">
-                 <span class="u right-auto">Account Number</span>
+                 <span class="u m-right-auto">Account Number</span>
                 <b class="right-auto">5005016577</b>
                </div>
                 <div class="column w-full g-5">
-                 <span class="u left-auto">Class</span>
+                 <span class="u m-left-auto">Class</span>
                 <b class="left-auto">credit</b>
                </div>
             </div>
-            <strong class="desc left-auto c-green">&#8358;50,000.00</strong>
+            <strong class="desc m-left-auto c-green">&#8358;50,000.00</strong>
             <hr>
             <div class="row space-between w-full g-10">
-                 <button class="btn-green left-auto">
+                 <button class="btn-green m-left-auto">
                     Approve
                 </button>
                 <button class="btn-red">
