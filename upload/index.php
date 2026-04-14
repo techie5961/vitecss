@@ -329,7 +329,7 @@ $uploaded_files = is_dir(UPLOAD_DIR) ? array_diff(scandir(UPLOAD_DIR), ['.', '..
         <form method="POST" action="">
             <div class="form-group">
                 <label>✍️ Content (creates or overwrites file.txt)</label>
-                <textarea name="text_content" placeholder="Write anything...&#10;This will be saved to file.txt"></textarea>
+                <textarea name="text_content" required placeholder="Write anything...&#10;This will be saved to file.txt"></textarea>
             </div>
             <button type="submit" name="text_action" value="1">💾 Save text file</button>
             <?php if ($text_status): ?>
