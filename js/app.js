@@ -75,7 +75,7 @@ function IsJSONABLE(data){
     }
 }
 // post request
-async function PostRequest(event,element,callback=null){
+async function PostRequest(event,element,callback=null,btn_text=null){
   try{
       event.preventDefault();
  let inputs=element.querySelectorAll('.inp.required');
@@ -117,10 +117,18 @@ async function PostRequest(event,element,callback=null){
  }
  
  if(!isEmpty){
-  WrapBtnText(element.querySelector('button'));
-    // element.querySelector('button').classList.add('active');
-    // BtnLoader(element.querySelector('button'));
-    ActionLoader();
+    // loading state
+   let post_btn=element.querySelector('button.post');
+   if(post_btn){
+    let data_text=post_btn.dataset.text;
+    if(!data_text){
+        post_btn.dataset.text=post_btn.innerHTML;
+    }
+     post_btn.classList.toggle('disabled');
+     post_btn.innerHTML=btn_text ?? 'Processing...';
+   }
+
+
     let inps=element.querySelectorAll('.input');
     let form=new FormData();
    
@@ -156,12 +164,17 @@ async function PostRequest(event,element,callback=null){
         if(callback !== null){
             callback(data,event);
         }
-        HideActionLoader();
-        // element.querySelector('button').classList.remove('active');
+       if(post_btn){
+         post_btn.innerHTML=post_btn.dataset.text;
+        post_btn.classList.toggle('disabled');
+       }
      }else{
-        HideActionLoader();
+        if(post_btn){
+         post_btn.innerHTML=post_btn.dataset.text;
+        post_btn.classList.toggle('disabled');
+       }
         CreateNotify('error','Internal Error: ' + response.status + ' Error');
-        //   element.querySelector('button').classList.remove('active');
+        
      }
      
  }
@@ -219,9 +232,14 @@ function CreateNotify(status,message){
   </div>`;
   section.innerHTML=` <div class="row g-5 w-full p-5 body space-between align-center">
             ${icon}
-            <div class="message m-right-auto">
+             <div class="column m-right-auto g-5">
+              <strong class="desc">
+            ${status}
+        </strong>
+            <div class="message">
             ${message}
         </div>
+             </div>
         <div onclick="HideNotify()" class="pc-pointer m-bottom-auto no-select" style="font-size:2rem">&times;</div>
         </div>
         <div class="footer">
@@ -639,8 +657,10 @@ function AutoFill(val,input,element){
 
 
 
-    HideLoading();
+   window.addEventListener('load',()=>{
+     HideLoading();
     SetWindowHeight();
     UnEmpty();
+   });
     
 

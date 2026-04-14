@@ -622,7 +622,7 @@ button.active{
     pointer-events:none;
 }
 button.disabled{
-    filter:grayscale(90%);
+    filter:grayscale(50%);
     pointer-events:none;
 }
 
@@ -2135,6 +2135,7 @@ button.post.active .working{
 }
 .no-select{
     user-select:none;
+    -webkit-user-select:none;
 }
 .no-resize{
     resize: none;
