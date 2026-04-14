@@ -1,8 +1,8 @@
 :root{
     /* primary hsl number */
-    --primary-hsl:240;
+    --primary-hsl:208;
     /* primary color */
-    --primary:hsl(var(--primary-hsl),100%,50%);
+    --primary:hsl(var(--primary-hsl),70%,50%);
     /* light primary color */
     --primary-light:hsl(var(--primary-hsl),100%,70%);
      /* light primary color */
@@ -18,7 +18,7 @@
      /* text color */
     --text:black;
      /* primary font */
-    --font:'Instrument Sans';
+    --font:'dm sans';
     /* color on element with background as primary color */
     --primary-text:white;
     /* rgt hex value for text */
@@ -48,7 +48,7 @@
     --primary-09:rgba(var(--primary-rgb),0.9);
     --primary-10:rgb(var(--primary-rgb));
      /* rgb */
-   --rgb-001:rgba(var(--rgb),0.01);
+    --rgb-001:rgba(var(--rgb),0.01);
     --rgb-002:rgba(var(--rgb),0.02);
     --rgb-003:rgba(var(--rgb),0.03);
     --rgb-004:rgba(var(--rgb),0.04);
@@ -331,24 +331,25 @@ main{
 .notify{
     position:fixed;
     top:0;
-    
-    width:75%;
+    right:0;
+    width:70%;
     z-index:var(--z-index-high);
    margin:10px 10px 10px 20%;
-   background:var(--bg);
+   background:white;
     display:flex;
-    border-radius:10px;
+    border-radius:5px;
     flex-direction:column;
     align-items:center;
     gap:5px;
-    color:white;
-    clip-path:inset(0 round 10px);
+    color:black;
+    /* clip-path:inset(0 round 10px); */
     animation:come-in 0.5s ease forwards;
     user-select: none;
     max-width:500px;
-    border:0.5px solid;
+    /* border:0.5px solid; */
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
+    box-shadow:0 0px 10px rgba(0,0,0,0.1);
     /* padding:10px; */
     
     
@@ -393,8 +394,8 @@ main{
 }
 
 .notify.success{
-    border-color:#002501;
-    background:rgba(76, 175, 80,0.9);
+    border-left:5px solid #4caf50;
+   
 }
 .notify.success .body .icon{
    min-height:32px;
@@ -405,8 +406,12 @@ main{
 
 }
 .notify.error{
-     border-color:rgb(73, 2, 2);
-    background:rgba(255, 0, 0,0.9);
+     border-left:5px solid red;
+   
+}
+.notify.info{
+     border-left:5px solid blue;
+   
 }
 .notify.error .body .icon{
    min-height:32px;
@@ -518,7 +523,7 @@ hr.gradient{
 .break-word{
     word-break:break-all;
 }
-.btn,input,select,textarea{
+.btn,input,select,textarea,button{
     font-family:var(--font);
     
 
@@ -671,7 +676,7 @@ button.disabled{
     justify-content: center;
     gap:10px;
     font-family: var(--font);
-     border-bottom:2px solid hsl(var(--primary-hsl),50%,30%);
+    border-bottom:4px solid hsl(var(--primary-hsl),50%,30%);
     --height:20px;
     --size:0.8rem;
 }
@@ -1041,6 +1046,7 @@ button.post{
     cursor:pointer;
     clip-path:inset(0 round 10px) !important;
     --size:30px;
+    font-weight:bold;
   /* background:linear-gradient(to right,var(--primary-lighter),var(--primary)) */
 }
 button.post .working{
@@ -2518,27 +2524,29 @@ body:has(.modal.active){
     display:flex;
 }
 .modal.active .child{
-    animation:scale-out 0.5s linear forwards;
+    animation:animate-up 0.5s linear forwards;
 }
-@keyframes scale-out{
+@keyframes animate-up{
     0%{
-        transform:scale(0.5);
+        transform:translateY(30px);
+        opacity:0;
     }
     100%{
-        transform:scale(1);
+        transform:translateY(0);
+        opacity:1;
     }
 }
 .modal .child{
-    border-radius:20px;
+    border-radius:10px;
     display:flex;
     flex-direction:column;
     gap:10px;
     background:var(--bg-light);
     padding:20px;
-    width:100%;
+    width:80%;
     max-width:500px;
     border:1px solid rgba(255,255,255,0.5);
-    box-shadow:0 10px 10px rgba(0,0,0,0.3);
+    box-shadow:0 0px 10px rgba(0,0,0,0.3);
 
 }
 
